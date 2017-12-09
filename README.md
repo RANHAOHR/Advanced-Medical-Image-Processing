@@ -20,7 +20,7 @@ Package for classic image processing techniques:
 
 ![Alt text](/result images/snake.jpg?raw=true "snake shape segmentation")
 
-- demon_matching package: using demons algorithm (Thirion's paper: Image matching as a diffusion process: an analogy with Maxwell’s demons) with image pyramid to perform the segmentation. An atlas-based segmentation of the ventricles,the intracranial cavity and the head contours of human brains:
+- demon_matching package: using demons algorithm (Thirion's paper: Image matching as a diffusion process: an analogy with Maxwell’s demons) with image pyramid to perform the segmentation. An atlas-based segmentation of the ventricles, the intracranial cavity and the head contours of human brains:
 
 ![Alt text](/result images/demons_matching.jpg?raw=true "demons matching of the MRI brain image")
 
