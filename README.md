@@ -10,24 +10,24 @@ Package for classic image processing techniques:
 
 - Nonrigid_registration package: using thin-plate spline,
 
-![Alt text](/result_images/nonrigid_registration.jpg?raw=true "nonrigid registration using thin-plate spline")
+![Alt text](/result_images/nonrigid_registration.png?raw=true "nonrigid registration using thin-plate spline")
 
 - Intensity based registration package: using Mutual information (joint-entropy):
 
-![Alt text](/result_images/mutual_information.jpg?raw=true "MI nonrigid registration")
+![Alt text](/result_images/mutual_information.png?raw=true "MI nonrigid registration")
 
 -Snake shape package: see paper Snake: Active Contour Models. A segmentation technique using snake models, minimizing the energy function defined by internal and external force which is driven by the edge map (the target contour). Using three types of forces: gradient map, distance map and GVF (Gradient Vector Flow: A New External Force for Snakes),
 
-![Alt text](/result_images/snake.jpg?raw=true "snake shape segmentation")
+![Alt text](/result_images/snake.png?raw=true "snake shape segmentation")
 
 - demon_matching package: using demons algorithm (Thirion's paper: Image matching as a diffusion process: an analogy with Maxwell’s demons) with image pyramid to perform the segmentation. An atlas-based segmentation of the ventricles, the intracranial cavity and the head contours of human brains:
 
-![Alt text](/result_images/demons_matching.jpg?raw=true "demons matching of the MRI brain image")
+![Alt text](/result_images/demons_matching.png?raw=true "demons matching of the MRI brain image")
 
-![Alt text](/result_images/atlas_based_segmentation.jpg?raw=true "atlas based segmenation of the brain ventricle, intracranial cavity and head contours")
+![Alt text](/result_images/atlas_based_segmentation.png?raw=true "atlas based segmenation of the brain ventricle, intracranial cavity and head contours")
 
 - Active shape models package: containing hand segmentation using PCA algorithm.
 
-![Alt text](/result_images/first 4 eigen vector.jpg?raw=true "4 of the main eigen vecs of the mean hand space")
+![Alt text](/result_images/first 4 eigen vector.png?raw=true "4 of the main eigen vecs of the mean hand space")
 
-![Alt text](/result_images/hand fitting results .jpg?raw=true "red hand is the target hand contour and the green contours are the initial, first iteration and the final fitting hand results")
+![Alt text](/result_images/hand fitting results .png?raw=true "red hand is the target hand contour and the green contours are the initial, first iteration and the final fitting hand results")
