@@ -28,6 +28,8 @@ Package for classic image processing techniques:
 
 - Active shape models package: containing hand segmentation using PCA algorithm.
 
-![Alt text](/result_images/four_eigen_vector.png?raw=true "4 of the main eigen vecs of the mean hand space")
+4 of the main eigen vecs of the mean hand space
+![Alt text](/result_images/four_eigen_vector.png?raw=true "")
 
-![Alt text](/result_images/hand_fitting_results.png?raw=true "red hand is the target hand contour and the green contours are the initial, first iteration and the final fitting hand results")
+red hand is the target hand contour and the green contours are the initial, first iteration and the final fitting hand results
+![Alt text](/result_images/hand_fitting_results.png?raw=true "")
