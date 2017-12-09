@@ -8,7 +8,7 @@ clc;
 % 
 % load(FileName);
 
-load('/Users/ranhao/Desktop/test_image/ThirionTest6_L3_2017.mat'); %Test_nine_polyn,Test_nine_spline
+load('/Users/ranhao/Desktop/test_image/ThirionTest5_L3_2017.mat'); %Test_nine_polyn,Test_nine_spline
 
 figure(1);
 static_image = static;

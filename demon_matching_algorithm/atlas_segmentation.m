@@ -2,14 +2,14 @@ clear all;
 close all;
 clc;
 
-disp('To load the image, please put the file name');
-file_name = input('Please enter the file name:','s'); 
-FileName = ['/Volumes/NO NAME/',file_name];
-
-load(FileName);
+% disp('To load the image, please put the file name');
+% file_name = input('Please enter the file name:','s'); 
+% FileName = ['/Volumes/NO NAME/',file_name];
+% 
+% load(FileName);
 
 %load the templates
-% load('/Users/ranhao/Desktop/test_image/ThirionTest4_L1_2017.mat'); %ThirionTest5_L3_2017
+load('/Users/ranhao/Desktop/test_image/ThirionTest4_L1_2017.mat'); %ThirionTest5_L3_2017
 
 figure(1);
 target_image = static;

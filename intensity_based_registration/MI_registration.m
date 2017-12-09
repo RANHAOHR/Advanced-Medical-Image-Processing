@@ -2,13 +2,13 @@ clear all;
 close all;
 clc;
 
-disp('To load the image, please put the file name');
-file_name = input('Please enter the file name:','s'); 
-FileName = ['/Volumes/NO NAME/',file_name];
+% disp('To load the image, please put the file name');
+% file_name = input('Please enter the file name:','s'); 
+% FileName = ['/Volumes/NO NAME/',file_name];
+% 
+% load(FileName);
 
-load(FileName);
-
-%load('/Users/ranhao/Desktop/test_image/MItestimages.mat');
+load('/Users/ranhao/Desktop/test_image/MItestimages.mat');
 
 figure(1);
 origi_image = mitest;
