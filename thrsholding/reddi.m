@@ -1,10 +1,9 @@
 close all;
 set(0,'defaultfigurecolor','w') 
 
-optimization_method = input('choose 1 to use PSO method, choose 2 to use gradient-descent method:');
 
 figure(1);
-% inputImage = imread('/Users/ranhao/Desktop/cameraman.jpg');
+
 inputImage = testima;
 imshow(inputImage);
 
@@ -28,23 +27,8 @@ bar(hist_itensity);
 hold off;
 
 % compute delta_b, and compute error function
-% starting point
 
-% init_thresh = [k1,k2];
-
-if optimization_method == 1
-    % PSO optimization for thresh finding
-    figure(3)
-    bar(hist_itensity);
-
-    res = PSO(init_thresh, hist_itensity);
-
-    k1 = ceil(res(1) -1)
-    k2 = ceil(res(2) -1)
-
-elseif optimization_method ==2
-    %or books finding threshold
-    res = zeros(1,2);
+res = zeros(1,2);
 
 figure(3)
 bar(hist_itensity);
@@ -69,12 +53,8 @@ while (abs(temp_error(1)) > 1)
             pause(0.1);
 end
 
-    k1 = k_1_thresh -1
-    k2 = k_2_thresh -1
-else
-    disp('please only enter 1 or 2 to choose optimization method, exiting');
-    return
-end
+k1 = k_1_thresh -1
+k2 = k_2_thresh -1
 
 %show test results
 
