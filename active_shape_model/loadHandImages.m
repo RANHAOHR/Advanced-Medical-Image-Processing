@@ -69,7 +69,7 @@ hand_model = cell(10,1);
 % disp('finished');
 
 %---------- create a test hand model -------------
-figure(2);
+figure(3);
 image(hand_images{10,1});
 colormap(gray(256));
 [hand,test_x,test_y] = roipoly;

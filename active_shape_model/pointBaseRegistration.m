@@ -8,7 +8,7 @@ function [updatePoints, transformMatrix] = pointBaseRegistration(offsetPts, x_ve
     [a, updatePtsSize] = size(updatePoints(1,:));
     closePointVec = zeros(2, updatePtsSize);
     
-    for k = 1:150
+    for k = 1:50
         
         for i = 1:updatePtsSize
             currentPt = squeeze(updatePoints(:,i));
