@@ -1,5 +1,7 @@
 # Advanced-Medical-Image-Processing
 
+- Remember to put 'test_images' to right path.....
+
 Package for classic image processing techniques:
 
 - Thresholding package: containing Ostu and Reddi thresholding.
@@ -32,4 +34,4 @@ Package for classic image processing techniques:
 ![Alt text](/result_images/four_eigen_vector.png?raw=true "")
 
 red hand is the target hand contour and the green contours are the initial, first iteration and the final fitting hand results
-![Alt text](/result_images/hand_fitting_results.png?raw=true "")
+![Alt text](/result_images/hand_fitting.png?raw=true "")

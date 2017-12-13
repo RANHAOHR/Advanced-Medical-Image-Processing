@@ -1,17 +1,11 @@
-% clear all;
+clear all;
 close all;
-% clc;
+clc;
 
-% disp('To load the image, please put the file name');
-% file_name = input('Please enter the file name:','s'); 
-% FileName = ['/Volumes/NO NAME/',file_name];
-% 
-% load(FileName);
-% 
-% load('/Users/ranhao/Desktop/test_image/hand_Testpoints2.mat'); %TestActiveShape_a, TestActiveShape_2016,ActiveShapeTest6_2017 
+load('/Users/ranhao/Desktop/test_image/hand_testpoints2.mat'); %TestActiveShape_a, TestActiveShape_2016,ActiveShapeTest6_2017 
 load('/Users/ranhao/Desktop/test_image/hand_Modelpoints.mat'); % hand model
 
-% xy = xy2;
+xy = xy2;
 
 Nhands = 10;
 Nsample = size(xy,1) - 1; % resmapling method is N+1....
@@ -108,14 +102,14 @@ covMatrix = A'*A / 10;
 
 eigVecMat = A * eigVecMat;
 for i = 1 : Nhands
-    eigVecMat(:,i) = eigVecMat(:,i) / sqrt(latent(i) * 10);
+    eigVecMat(:,i) = eigVecMat(:,i) / sqrt(latent(i) * Nhands);
 end
 
 figure(2);
 for i = -100:10:100
 
     subplot(2,2,1);
-    EigenShape1 = meanVec + i * squeeze(eigVecMat(:,5));
+    EigenShape1 = meanVec + i * squeeze(eigVecMat(:,1));
     handPts = getDataVecToPts(EigenShape1);
     
     plot(handPts(1,:), handPts(2,:),'r*','linewidth',1);
@@ -125,7 +119,7 @@ for i = -100:10:100
     hold off;
 
     subplot(2,2,2);
-    EigenShape2 = meanVec + i * squeeze(eigVecMat(:,6));
+    EigenShape2 = meanVec + i * squeeze(eigVecMat(:,2));
     handPts = getDataVecToPts(EigenShape2);
     
     plot(handPts(1,:), handPts(2,:),'r*','linewidth',1);
@@ -135,7 +129,7 @@ for i = -100:10:100
     hold off;
     
     subplot(2,2,3);
-    EigenShape3 = meanVec + i * squeeze(eigVecMat(:,7));
+    EigenShape3 = meanVec + i * squeeze(eigVecMat(:,3));
     handPts = getDataVecToPts(EigenShape3);
     
     plot(handPts(1,:), handPts(2,:),'r*','linewidth',1);
@@ -145,7 +139,7 @@ for i = -100:10:100
     hold off;
     
     subplot(2,2,4);
-    EigenShape4 = meanVec + i * squeeze(eigVecMat(:,8));
+    EigenShape4 = meanVec + i * squeeze(eigVecMat(:,4));
     handPts = getDataVecToPts(EigenShape4);
     
     plot(handPts(1,:), handPts(2,:),'r*','linewidth',1);
@@ -165,8 +159,6 @@ figure(3);
 hlayer = ones(1,Nsample+1);
 
 [sampledTargetPts] = resampling(Nsample, xy(:,1)', xy(:,2)');
-
-% sampledTargetPts = xy';
 
 target_X = xy(:,1)';
 target_Y = xy(:,2)';
@@ -188,8 +180,7 @@ meanTargetMat = meanTargetMat^(-1);
 
 subplot(2,2,2);
 for i = 1:10
-   
-%     Xcm = resampling(Nsample, Xcm(1,:), Xcm(2,:));
+  
     Xcm = getDataVec(Xcm);
     b_vec = eigVecMat' * (Xcm - meanVec);
     
@@ -202,10 +193,8 @@ for i = 1:10
     [Xc, meanTargetMat] = pointBaseRegistration(X_new, sampledTargetPts(1,:), sampledTargetPts(2,:));
     
     Xc = [Xc;hlayer];
-%     Xcm = meanTargetMat^(-1) * Xc;
-%     Xcm= Xcm(1:2,:);
-    
     Xcm = X_new;
+    
     plot(target_X(1,:), target_Y(1,:),'r*','linewidth',1);
     hold on;
     plot(target_X(1,:), target_Y(1,:),'r-','linewidth',1);
